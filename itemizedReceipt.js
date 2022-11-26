@@ -12,10 +12,11 @@ const logReceipt = function(...menuItems) {
   }
 
   menuItems.forEach((menuItems)=>{
-    console.log(menuItems.descr)
+    console.log(menuItems.descr + ' = $' + menuItems.price)
     addToTotal(menuItems.price)
   })
-  console.log('total price = ' + totalPrice)
+  console.log('total price before tax = ' + '$' + (totalPrice))
+  console.log('total price with tax = ' + '$' + (totalPrice * 1.10).toFixed(2))
 }
 
 // Check
